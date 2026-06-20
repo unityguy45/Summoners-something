@@ -1,2 +1,2 @@
 Summoners Something
-A fast paced dungeon crawler game with a nice twist 
+As a person whos always wanted to make a game this is my first real project where im making a game and everything by myself including the art the code the assets everything the game im making is a fast paced dungeon crawler game with a nice twist that twist being your main weapon is summons and your mellee attacks are basically useless this project is still pretty early in development
