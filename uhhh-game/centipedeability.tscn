@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://djyrt1ws3vr2y"]
+
+[ext_resource type="Texture2D" uid="uid://c1om4frt6ro4c" path="res://assets/hud-sheet.png" id="1_ki3vf"]
+[ext_resource type="Script" uid="uid://c1ti1c35hd6b5" path="res://centipedeability.gd" id="2_npp2n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npp2n"]
+atlas = ExtResource("1_ki3vf")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qand"]
+atlas = ExtResource("1_ki3vf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xtdfm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npp2n")
+}],
+"loop": false,
+"name": &"abilty selected",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qand")
+}],
+"loop": false,
+"name": &"abilty unselected",
+"speed": 5.0
+}]
+
+[node name="Centipedeability" type="AnimatedSprite2D" unique_id=1525783968]
+sprite_frames = SubResource("SpriteFrames_xtdfm")
+animation = &"abilty selected"
+script = ExtResource("2_npp2n")

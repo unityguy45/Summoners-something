@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bxdbqj7gi7t5d"]
+
+[ext_resource type="Texture2D" uid="uid://p7okwv0133un" path="res://assets/impact.png" id="1_pvcw0"]
+[ext_resource type="Script" uid="uid://dwjw8exbna4ar" path="res://impact.gd" id="2_caylm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_caylm"]
+atlas = ExtResource("1_pvcw0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6l1y3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_caylm")
+}],
+"loop": false,
+"name": &"Impact",
+"speed": 5.0
+}]
+
+[node name="Impact" type="AnimatedSprite2D" unique_id=2075883182]
+sprite_frames = SubResource("SpriteFrames_6l1y3")
+animation = &"Impact"
+script = ExtResource("2_caylm")

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bl64qs55xw41y"]
+
+[ext_resource type="Texture2D" uid="uid://cdp5u3tbgqd7c" path="res://assets/Grass.png" id="1_kl2qe"]
+[ext_resource type="Script" uid="uid://b4nqxwi613x5j" path="res://grass.gd" id="1_mw2ei"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw2ei"]
+atlas = ExtResource("1_kl2qe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qnaq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw2ei")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmnf0"]
+atlas = ExtResource("1_kl2qe")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ljfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmnf0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kl2qe"]
+radius = 6.0
+
+[node name="Grass" type="Node2D" unique_id=831990431]
+scale = Vector2(2, 2)
+script = ExtResource("1_mw2ei")
+
+[node name="LeafPivot1" type="Node2D" parent="." unique_id=1236643243]
+
+[node name="LeafSprite1" type="AnimatedSprite2D" parent="LeafPivot1" unique_id=1055846663]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_2qnaq")
+
+[node name="LeafPivot2" type="Node2D" parent="." unique_id=1542927428]
+
+[node name="LeafSprite2" type="AnimatedSprite2D" parent="LeafPivot2" unique_id=1565727941]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6ljfx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1252423656]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=149269162]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_kl2qe")

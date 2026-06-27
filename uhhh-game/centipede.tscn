@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://27ispsaes766"]
+
+[ext_resource type="Texture2D" uid="uid://y1qdhna6n581" path="res://assets/Centepedde heady .png" id="1_7dag8"]
+[ext_resource type="Script" uid="uid://4ww8qllxc8rd" path="res://centipede.gd" id="1_md0ar"]
+[ext_resource type="Texture2D" uid="uid://dumg3wg4x5y1w" path="res://assets/Centepedde Body .png" id="2_md0ar"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqwtj"]
+atlas = ExtResource("2_md0ar")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_146py"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqwtj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxodw"]
+atlas = ExtResource("1_7dag8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7vsh1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxodw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Centipede" type="Node2D" unique_id=405118012]
+script = ExtResource("1_md0ar")
+
+[node name="Body" type="AnimatedSprite2D" parent="." unique_id=1818065853]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_146py")
+
+[node name="Head" type="AnimatedSprite2D" parent="." unique_id=555490636]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_7vsh1")
